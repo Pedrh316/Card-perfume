@@ -1,0 +1,134 @@
+
+        body{
+            font-size:14px;   
+            margin:0;
+            height:90vh;
+            overflow:hidden;
+        }
+        h1{
+            margin:0;
+            padding:0;
+        }
+        p{
+            margin:0;
+            padding:0;
+        }
+        h2{
+            margin:0;
+            padding:0;
+        }
+        
+        #container{
+            background-color:hsl(30, 100%, 95%);
+            height:100vh;
+            width:85%;
+            margin:auto;
+            display:grid;
+            place-items: center;
+        }
+        
+        #cardContainer{
+            box-sizing:border-box;
+            width:600px;
+            height:450px;
+            margin:auto;
+            background-color:white;
+        }
+        
+        .col-1-2{
+            float:left;
+            width:50%;
+            flex-basis:1fr 1fr;
+        }
+        .col-1-2:first-child{
+            width:50%;
+            height:100%;
+            background-image:url(images/image-product-desktop.jpg);
+            background-size:100% 100%;
+        }
+        
+        .col-1-2.content{
+            display:flex;
+            height:100%;
+            padding:2em;
+            box-sizing:border-box;
+            flex-direction:column;
+            justify-content: space-between;
+        }
+        .content h1, p{
+            color:hsl(228, 12%, 48%);
+            font-size:1.2em;
+        }
+        .content h1{
+            letter-spacing:3px;
+            text-transform:uppercase;
+        }        
+        .content h2, var:first-child{
+            font-size:2.5em;
+            font-family: 'Fraunces', serif;
+        }        
+        .content p{
+            line-height:1.5;
+        }
+        
+        .content var{
+            display:inline-block;
+            width:49%;
+            font-style:normal;
+            
+        }
+        .content .promotion{
+            font-size:2em;            
+            float:left;
+            color:hsl(158, 36%, 37%);
+        }
+        .content .before{
+            float:left;
+            text-decoration:line-through;
+            text-decoration-color:hsl(212, 21%, 14%);
+            color:hsl(228, 12%, 48%);
+        }        
+        .content a{
+            display:block;
+            box-sizing:border-box;
+            width:100%;
+            padding:1em;
+            border-radius:5px;
+            text-align:center;
+            color:white;
+            background-color:hsl(158, 36%, 37%);            
+        }
+        abbr{
+            text-decoration:none;
+        }    
+    
+        
+        @media screen and (min-width:300px) and (max-width:700px){
+            .col-1-2{
+                float:none;
+                width:100%;
+            }
+            .col-1-2:first-child{
+                background-image:url(images/image-product-mobile.jpg);
+                width:100%;
+                height:40%;
+            }
+            .col-1-2:last-child{
+                height:60%;
+            }
+            #container{
+                box-sizing:border-box;
+                width:100vw;
+                height:100vh;
+                padding:2em 1em;
+            }
+            
+            
+            #cardContainer{
+                width:100%;
+                height:100%;
+                flex-direction:column;
+            }
+            
+        }
+        
